@@ -121,7 +121,7 @@
         '<p class="mb-1">Sponsored By : <b>' + CM.SPONSOR + '</b> — ' + CM.SPONSOR_LOC + '</p>' +
         '<p class="small text-secondary mb-2">HTML • CSS • JavaScript • Bootstrap 5</p>' +
         '<button id="resetBtn" class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i> Reset Progress</button>' +
-        '<p class="small text-secondary mt-3 mb-0">&copy; 2026 ' + CM.DEV + '. Released under the <a href="LICENSE" target="_blank" rel="noopener">MIT License</a>.</p></div>';
+        '<p class="small text-secondary mt-3 mb-0">&copy; 2026 ' + CM.DEV + '. Released under the <a href="LICENSE" target="_blank" rel="noopener">THIRD-PARTY License</a>.</p></div>';
     }
     var tb = document.createElement('div');
     tb.className = 'toast-container position-fixed bottom-0 end-0 p-3';
