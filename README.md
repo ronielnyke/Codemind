@@ -1,371 +1,534 @@
 CODEMIND — Developer Thinking Lab
 
-Train Your Mind. Think Like a Developer.
+Tagline: Train Your Mind. Think Like a Developer.
 
-CODEMIND is an interactive programming quiz platform designed to help learners improve their programming knowledge, logical thinking, debugging skills, and understanding of code. It provides short challenges across nine programming topics, with instant feedback, progress tracking, experience points, achievements, and a certificate of completion.
+Project Type: Browser-Based Interactive Programming Practice and Debugging Trainer
+Developer / System Owner: Roniel Nyke Gonzales
+Sponsor Listed in the Application: Iloilo Tech Company — Iloilo City
+Copyright Notice: © 2026 Roniel Nyke Gonzales, for original CODEMIND materials authored by the copyright holder.
+
+«License Notice: This project includes a "LICENSE" file titled CODEMIND — PROPRIETARY SOFTWARE LICENSE. The project is not released under the MIT License by that file. Third-party components retain their respective licenses. See "THIRD-PARTY-NOTICES.md" for additional information. Some existing source-code comments and page text contain older MIT License references that should be corrected to avoid confusion.»
+
+---
 
 Table of Contents
 
-- "Project Overview" (#project-overview)
-- "Main Features" (#main-features)
-- "Programming Tracks" (#programming-tracks)
-- "Quiz Rules and Scoring" (#quiz-rules-and-scoring)
-- "Learning Flowchart" (#learning-flowchart)
-- "Progress Tracking" (#progress-tracking)
-- "Achievements and Badges" (#achievements-and-badges)
-- "Certificate of Completion" (#certificate-of-completion)
-- "User Interface" (#user-interface)
-- "Technologies Used" (#technologies-used)
-- "Project Structure" (#project-structure)
-- "Data Storage and Limitations" (#data-storage-and-limitations)
-- "Credits" (#credits)
-- "License" (#license)
+1. "Overview" (#overview)
+2. "Purpose and Learning Approach" (#purpose-and-learning-approach)
+3. "Features" (#features)
+4. "Pages and Navigation" (#pages-and-navigation)
+5. "Learning Tracks and Systems" (#learning-tracks-and-systems)
+6. "Quiz Rules, Scoring, and Progress" (#quiz-rules-scoring-and-progress)
+7. "Achievements and Badges" (#achievements-and-badges)
+8. "Certificate of Completion" (#certificate-of-completion)
+9. "Technology Stack" (#technology-stack)
+10. "Project Structure" (#project-structure)
+11. "Installation and Usage" (#installation-and-usage)
+12. "Progress Storage and Privacy" (#progress-storage-and-privacy)
+13. "Known Limitations" (#known-limitations)
+14. "Third-Party Components and Credits" (#third-party-components-and-credits)
+15. "License and Permissions" (#license-and-permissions)
 
-Project Overview
+---
 
-CODEMIND provides a practice environment where learners answer programming questions and receive feedback about their answers.
+Overview
 
-The platform focuses on three learning activities:
+CODEMIND is a browser-based learning application designed to help users practice programming concepts, improve code-reading skills, and develop debugging skills through interactive challenges.
 
-1. Code Analysis — Understand code snippets and predict their output.
-2. Debugging — Identify mistakes and improve understanding of programming logic.
-3. Knowledge Assessment — Test programming knowledge through multiple-choice questions.
+The application provides a dashboard, programming tracks, systems challenges, answer feedback, experience points (XP), levels, progress tracking, achievement badges, and a certificate of completion.
 
-The system combines learning activities with a progress and achievement system to encourage learners to continue practicing.
+CODEMIND uses HTML, CSS, and client-side JavaScript. The supplied project does not include a backend server, remote API, or cloud database. Learner progress is saved locally in the browser.
 
-CODEMIND runs in a web browser and uses client-side technologies. It does not require a backend server or database for its current browser-based progress features.
+Purpose and Learning Approach
 
-Main Features
+CODEMIND aims to help learners strengthen their programming knowledge through repeated practice and interactive problem-solving.
 
-1. Interactive Dashboard
+The platform focuses on:
 
-The dashboard provides an overview of the learner's progress.
+- Code Reading: Understand code snippets and predict their behavior.
+- Debugging: Identify programming errors and enter acceptable corrections.
+- Programming Fundamentals: Practice syntax, operators, data types, control flow, and other programming concepts.
+- Problem-Solving: Apply logical reasoning to programming questions and systems scenarios.
+- Progress Tracking: Review quiz results, completion status, accuracy, and achievements.
+- Continuous Learning: Repeat challenges and improve previous results.
 
-It includes:
+CODEMIND is an educational practice tool. Its scores, XP, levels, badges, and certificate are internal platform features. They do not constitute an accredited academic qualification, government-issued license, or professional certification.
 
-- Learner name.
-- Total experience points (XP).
-- Current level.
-- Answer accuracy.
-- Practice streak.
-- Number of programming tracks passed.
-- Topics that may need additional practice.
+Features
 
-The dashboard helps learners review their performance and decide which programming track to practice next.
+1. Dashboard
 
-2. Programming Track Selection
+The dashboard provides an overview of the learner's progress, including:
 
-The platform provides nine programming tracks. Learners can select a topic and begin a quiz.
+- Saved learner name.
+- Current level and accumulated XP.
+- Overall completion progress.
+- Recorded quiz accuracy.
+- Learning streak.
+- Number of passed challenges.
+- Tracks that may require additional practice.
 
-Each track has its own question bank and records its own passing status and best score.
+Displayed information depends on the progress saved in the browser.
 
-3. Multiple-Choice Quizzes
+2. Programming Tracks
 
-Each quiz round contains five questions.
+The platform includes nine programming-language or framework tracks:
 
-Questions may involve identifying programming mistakes, understanding code behavior, or predicting output. The learner selects an answer from the available choices.
+- HTML
+- CSS
+- JavaScript
+- PHP
+- SQL
+- React
+- Python
+- Java
+- Flutter
 
-After submitting an answer, the system displays feedback and an explanation. Answer buttons are disabled after the selection to prevent multiple answers to the same question.
+Each track contains questions designed to help learners review concepts associated with that technology.
 
-4. Instant Answer Feedback
+3. Systems Challenges
 
-CODEMIND provides feedback after each answer.
+CODEMIND includes four systems-oriented challenge categories:
 
-- Correct answer: Displays positive feedback, an explanation, and the applicable XP reward.
-- Incorrect answer: Displays corrective feedback and an explanation of the question.
+- Login System
+- REST API + Database
+- Scalable Backend
+- Debug Lab
 
-The quiz then allows the learner to continue to the next question.
+These challenges introduce concepts related to authentication, APIs, databases, backend architecture, and debugging.
 
-5. Experience Points and Levels
+4. Interactive Quizzes
 
-The platform uses experience points to represent learning activity.
+The quiz interface allows learners to answer questions and receive feedback.
 
-- A correct answer earns 10 XP.
-- Completing a passing quiz round awards 50 bonus XP.
-- The displayed level is calculated from accumulated XP.
+Features include:
 
-The level calculation used by the certificate is:
+- Question selection from the chosen track.
+- Shuffled questions and answer choices where implemented.
+- Answer validation.
+- Correct and incorrect answer feedback.
+- Explanations and learning guidance.
+- Score calculation.
+- Track-level results.
+- Retry functionality.
 
-"Level = floor(Total XP / 100) + 1"
+The available number of questions depends on the selected track's question pool and the quiz logic.
 
-For example, a learner with 250 XP is displayed at Level 3.
+5. Debug Lab
 
-XP, levels, and achievements are gamification features. They do not represent an official assessment of professional programming ability.
+Debug Lab allows learners to inspect a code sample, identify an issue, and enter an acceptable correction.
 
-6. Track Results
+This challenge emphasizes code reading and practical debugging rather than relying exclusively on multiple-choice answers.
 
-The system records the best score and passing status for each programming track.
+6. Experience Points and Levels
 
-A track is considered passed when the learner scores at least four correct answers out of five.
+The platform awards XP according to its quiz logic.
 
-Learners can revisit tracks to practice again and improve their understanding.
+Learners can accumulate XP, increase their levels, and monitor their progress through the dashboard.
 
-7. Achievements and Badges
+These mechanics encourage repeated practice and provide feedback about learning activity.
 
-CODEMIND includes seven achievement badges.
+7. Progress Tracking
 
-The achievement system recognizes milestones associated with learning activity and quiz performance. The badges page also includes a results table for the programming tracks.
+The application records information such as:
 
-Badges are intended to encourage continued practice. They are platform achievements, not professional certifications.
-
-8. Certificate of Completion
-
-The certificate page tracks completion of the nine programming tracks.
-
-The certificate becomes available when:
-
-- All nine programming tracks have been passed.
-- A learner name has been saved.
-
-The certificate is generated as an image and includes information such as:
-
-- Learner name.
-- Issue date.
-- Certificate ID.
-- Completed programming tracks.
-- Total XP.
+- Track completion status.
+- Best score.
+- Number of attempts.
+- Correct answers.
+- Total recorded answers.
 - Accuracy.
-- Level.
-- Developer and sponsor credits.
+- XP and level progress.
 
-Available certificate actions include downloading a PNG image and printing the certificate or saving it as a PDF through the browser's print dialog.
+The information is stored locally rather than synchronized through a remote account system.
 
-The certificate is issued by the CODEMIND platform. It is not an accredited academic degree, government-issued qualification, or professional license. Its Certificate ID does not have an online verification service.
+8. Achievements and Badges
 
-9. Dark and Light Themes
+CODEMIND includes seven badge definitions in its shared JavaScript code.
 
-The interface supports dark and light themes to provide different viewing preferences.
+The badges page displays achievement status and provides a summary of results across the learning tracks.
 
-The selected theme is handled by the browser-based interface and its associated client-side logic.
+Badges are motivational features within the application and are not external professional awards.
 
-10. Animated Introduction
+9. Certificate of Completion
 
-The introductory sequence presents the system through animated visual scenes.
+The certificate page displays completion progress and provides certificate-generation features when the application's requirements are satisfied.
 
-The documented sequence includes:
+The certificate functionality includes:
 
-1. System name.
-2. Developer information.
-3. Sponsor information.
-4. Programming tracks.
-5. Technologies used.
-6. A call to action.
+- Learner name.
+- Completion information.
+- Issue date.
+- Certificate identifier.
+- Platform credits.
+- PNG download.
+- Printing through the browser's print dialog, including the option to save as PDF.
 
-The introduction includes visual effects, a progress indicator, a Skip control, automatic sound with no mute button, and keyboard controls. It is designed to appear on the first visit of a browser session and can be replayed through the Intro control in the navigation.
+The certificate is generated in the browser using the Canvas API.
 
-11. Responsive Interface
+It is a platform-issued certificate, not an accredited academic certificate, TESDA National Certificate, government license, or professional license.
 
-The interface uses responsive layout components and CSS styling to adapt its content to different screen sizes.
+10. User Interface and Experience
 
-The design includes cards, navigation, tables, progress indicators, gradients, animations, and other visual effects.
+The application includes:
 
-12. Reset Progress
+- Responsive page layouts.
+- Shared navigation.
+- Shared footer.
+- Dark and light theme controls.
+- CSS transitions and animations.
+- Interface reveal effects.
+- Animated introductory scenes.
+- Browser-generated introductory audio.
 
-The interface includes a Reset Progress feature for clearing saved learning progress.
+Audio playback may depend on browser autoplay restrictions and user interaction.
 
-Use this action carefully because resetting progress may remove previously saved results and achievements.
+---
+
+Pages and Navigation
+
+File| Description
+"index.html"| Main dashboard and learner overview
+"tracks.html"| Displays programming tracks and systems challenges
+"quiz.html"| Quiz and challenge interface
+"badges.html"| Achievement badges and track results
+"certificate.html"| Certificate progress and generation
+"about.html"| Project information, developer details, and sponsor information
+
+The quiz page accepts a track identifier through a URL query parameter.
+
+Example:
+
+"quiz.html?track=javascript"
+
+The exact identifier must match the corresponding track ID defined in "data.js".
+
+The shared navigation and footer are handled by "common.js" and inserted into the designated page elements.
+
+---
+
+Learning Tracks and Systems
+
+CODEMIND defines 13 challenge categories in total.
 
 Programming Tracks
 
-CODEMIND contains nine programming tracks.
+Track| Learning Focus
+HTML| Page structure, semantic elements, forms, and accessibility
+CSS| Selectors, specificity, layout, positioning, and responsive design
+JavaScript| Data types, operators, scope, arrays, debugging, and program behavior
+PHP| Variables, strings, form input, sessions, and database safety
+SQL| Queries, filtering, joins, aggregate functions, and data safety
+React| Components, props, state, hooks, event handling, and lists
+Python| Syntax, data types, operators, collections, and errors
+Java| Program entry points, types, strings, arrays, inheritance, and exceptions
+Flutter| Dart and Flutter widgets, layouts, navigation, and common commands
 
-No.| Track| Learning Focus
-1| HTML| Web page structure and HTML concepts
-2| CSS| Styling, layout, and presentation concepts
-3| JavaScript| Programming logic and code behavior
-4| PHP| Server-side programming concepts
-5| SQL| Database query concepts
-6| React| Component-based interface concepts
-7| Python| General programming concepts
-8| Java| Programming syntax and logic
-9| Flutter| Cross-platform application development concepts
+Systems Challenges
 
-These descriptions explain the general subjects of the tracks. The actual questions available in each track depend on the question bank included in the project.
+Challenge| Learning Focus
+Login System| Login flow and authentication-related concepts
+REST API + Database| API and data-layer concepts
+Scalable Backend| Backend architecture and scalability concepts
+Debug Lab| Code inspection, error identification, and correction
 
-Quiz Rules and Scoring
+The question data is maintained in "data.js".
 
-The quiz uses the following rules:
+The source includes a 50-question round target, but the number of questions available in a round depends on the selected track's question pool and the implemented quiz logic.
 
-Rule| Description
-Questions per track in the question bank| 7
-Questions per round| 5
-Minimum passing score| 4 out of 5
-XP per correct answer| 10 XP
-Passing-round bonus| 50 XP
-Total programming tracks| 9
-Total questions in the question bank| 63
+---
 
-The system shuffles answer choices and avoids repeating a question within the same round. It prioritizes unseen questions in later rounds when available.
+Quiz Rules, Scoring, and Progress
 
-Because each track has a limited question bank, questions can appear again in later rounds.
+The current source code defines the following scoring behavior:
 
-Learning Flowchart
+- Starting a round increments the attempt count for the selected track.
+- Questions are selected from the available question pool.
+- The shared passing threshold is four correct answers, configured through "CM.PASS_SCORE = 4".
+- A correct multiple-choice answer earns 10 XP according to the shared quiz logic.
+- A passing round awards a 50 XP bonus according to the quiz logic.
+- The level calculation uses "floor(total XP / 100) + 1".
+- Track results include pass status, best result, attempts, and recorded answer statistics.
+- Overall accuracy is calculated using recorded correct and total answers.
+- The dashboard can identify tracks that may need further practice based on recorded accuracy.
+- The learning streak uses dates recorded by the application.
+- Learners can retry challenges and retain saved progress.
 
-The following flowchart explains the main learning process, from opening CODEMIND to unlocking the certificate.
+The exact result calculations depend on the implementation in "common.js", "quiz.js", and the selected track's data.
 
-flowchart TD
-    A([Open CODEMIND]) --> B[Enter and Save Learner Name]
-    B --> C[Choose a Programming Track]
-    C --> D[Start a Quiz Round]
-    D --> E[Answer Five Questions]
-    E --> F[Review Feedback and Explanations]
-    F --> G{Score at Least 4 out of 5?}
-    G -- No --> H[Review Mistakes and Practice Again]
-    H --> C
-    G -- Yes --> I[Mark Track as Passed]
-    I --> J[Update XP, Results, and Achievements]
-    J --> K{Have All Nine Tracks Been Passed?}
-    K -- No --> C
-    K -- Yes --> L{Is Learner Name Saved?}
-    L -- No --> B
-    L -- Yes --> M[Unlock Certificate]
-    M --> N[Download PNG or Print as PDF]
-    N --> O([Learning Milestone Completed])
+All quiz processing occurs in the browser. Results are not verified by a remote service and should not be treated as proctored examination results.
 
-Flowchart note: This is a documentation diagram written in Mermaid syntax. It explains the learning workflow; it is not a separate interactive feature inside the application. It renders in Markdown viewers that support Mermaid.
-
-Progress Tracking
-
-CODEMIND saves learning information in browser storage.
-
-The recorded information supports features such as:
-
-- Total XP.
-- Current level.
-- Answer statistics.
-- Practice streak.
-- Track passing status.
-- Best track scores.
-- Achievement progress.
-- Saved learner name.
-- Certificate information.
-
-Progress is stored locally in the browser rather than in an online user account.
-
-As a result, progress does not automatically synchronize across different browsers or devices. Clearing the browser's stored site data may remove saved progress.
+---
 
 Achievements and Badges
 
-The achievements page provides a visual summary of earned badges and track results.
+The badges page displays the seven badge definitions implemented in "common.js".
 
-Badges are intended to reward milestones and encourage learners to continue practicing. Track results provide additional information about performance in individual programming subjects.
+It also provides a results table showing information associated with the programming tracks, including:
 
-The exact badge conditions are defined by the achievement logic included in the project.
+- Pass status.
+- Best score.
+- Attempt count.
+- Recorded accuracy.
+
+Badge availability depends on the conditions implemented in the source code and the learner's locally saved progress.
+
+Achievements are internal learning milestones and do not represent independently verified qualifications.
+
+---
 
 Certificate of Completion
 
-The certificate is generated through the browser's Canvas API.
+The certificate page tracks progress across the 13 challenge categories.
 
-It displays the learner's saved name, completion information, selected statistics, issue date, certificate ID, and project credits.
+The interface indicates that all nine programming tracks and four systems challenges must be completed, together with a saved learner name, to meet the stated completion requirements.
 
-The certificate can be downloaded as a PNG image. The print option allows the learner to use the browser's print dialog to print the certificate or save it as a PDF.
+When unlocked, the certificate script generates the certificate using the browser's Canvas API.
 
-Important: The certificate confirms completion according to CODEMIND's own quiz rules. It does not prove professional competency through an independently verified examination. The project does not provide an online certificate-validation service.
+Available certificate features include:
 
-User Interface
+1. Displaying the learner's name.
+2. Showing completion information.
+3. Generating an issue date and certificate identifier.
+4. Downloading the certificate as a PNG image.
+5. Printing the certificate through the browser.
+6. Using the browser's print dialog to save a PDF copy.
 
-The project uses separate pages for its major sections.
+The certificate is generated by the client-side application. It is not independently authenticated by a server and does not constitute a government-issued license or accredited professional qualification.
 
-Page| Purpose
-"index.html"| Main dashboard and introductory experience
-"tracks.html"| Displays the programming tracks
-"quiz.html"| Presents quiz questions and round results
-"badges.html"| Displays achievements and track results
-"certificate.html"| Shows certificate progress and certificate actions
-"about.html"| Presents project information, technologies, and credits
+---
 
-The shared interface includes navigation and footer areas, while CSS and JavaScript provide styling and page behavior.
+Technology Stack
 
-Technologies Used
+Core Technologies
 
-Technology| Purpose
-HTML5| Defines the structure and content of the pages
-CSS3| Provides layout, responsive styling, animations, gradients, and visual effects
-Vanilla JavaScript (ES6+)| Handles quiz behavior, scoring, progress, achievements, and interactive features
-Bootstrap 5.3| Provides responsive layout components and interface elements
-Bootstrap Icons| Supplies icons used in the interface
-Canvas API| Supports visual drawing for the introduction and certificate
-Web Audio API| Plays the introductory sound automatically
-LocalStorage| Stores learner progress and other persistent browser-side information
-sessionStorage| Remembers session-specific information, such as whether the introduction has been shown
+HTML5
 
-PHP, SQL, React, Python, Java, and Flutter are subjects covered by the quiz. They are not the primary technologies used to build the CODEMIND interface.
+Used to define page structure, content, forms, navigation, and application sections.
+
+CSS3
+
+Used for layout, responsive styling, visual effects, transitions, animations, and theme presentation.
+
+JavaScript (ES6+)
+
+Used for application logic, question selection, scoring, progress management, interface updates, achievements, and certificate generation.
+
+Libraries and Browser APIs
+
+Bootstrap 5.3.3
+
+Used for responsive layout and interface components. It is loaded from the jsDelivr CDN.
+
+Bootstrap Icons 1.11.3
+
+Used for interface icons. It is loaded from the jsDelivr CDN.
+
+LocalStorage API
+
+Used to save learner progress and theme preferences in the browser.
+
+Canvas API
+
+Used to draw the certificate and support visual elements in the introductory experience.
+
+Web Audio API
+
+Used to generate introductory audio in the browser.
+
+The programming languages and frameworks covered by the learning tracks are subjects of the quizzes; they are not all used to build the CODEMIND application itself.
+
+---
 
 Project Structure
 
-The documented project organization is:
+The following is the structure of the supplied project:
 
-CODEMIND/
-├── index.html, tracks.html, quiz.html, badges.html, certificate.html, about.html
+codemind/
+├── index.html
+├── tracks.html
+├── quiz.html
+├── badges.html
+├── certificate.html
+├── about.html
 ├── style.css
-├── data.js, common.js, intro.js, home.js, tracks.js, quiz.js, badges.js, certificate.js
+├── data.js
+├── common.js
+├── home.js
+├── tracks.js
+├── quiz.js
+├── badges.js
+├── certificate.js
+├── intro.js
 ├── LICENSE
 └── README.md
 
-File Responsibilities
+File Descriptions
 
-- "index.html" — Main dashboard and introductory experience.
-- "tracks.html" — Track selection interface.
-- "quiz.html" — Quiz interface and results.
-- "badges.html" — Achievement badges and track results.
-- "certificate.html" — Certificate progress, preview, download, and print controls.
-- "about.html" — Project description, technologies, and credits.
-- "css/style.css" — Shared visual styling, responsive layout, and animations.
-- "js/data.js" — Programming question bank and badge definitions.
-- "js/common.js" — Shared state, browser storage, navigation, footer, theme, and notification logic.
-- "js/intro.js" — Introductory animation and related controls.
-- "js/home.js" — Dashboard behavior.
-- "js/tracks.js" — Track selection behavior.
-- "js/quiz.js" — Quiz engine, scoring, and round results.
-- "js/badges.js" — Achievement page behavior.
-- "js/certificate.js" — Certificate drawing, download, and print behavior.
+File| Responsibility
+"index.html"| Dashboard page structure
+"tracks.html"| Track and systems selection page
+"quiz.html"| Challenge and quiz page structure
+"badges.html"| Badge and track-results page structure
+"certificate.html"| Certificate progress and export page
+"about.html"| Project information page
+"style.css"| Shared styles, responsive layouts, transitions, and animations
+"data.js"| Track definitions, systems challenges, and question data
+"common.js"| Shared state, helper functions, navigation, footer, theme, and badge definitions
+"home.js"| Dashboard rendering and learner-name handling
+"tracks.js"| Track rendering and category filtering
+"quiz.js"| Quiz flow, answer handling, feedback, scoring, and results
+"badges.js"| Badge display and track-results rendering
+"certificate.js"| Certificate eligibility, rendering, download, and print functionality
+"intro.js"| Introductory sequence, animation, and generated audio
+"LICENSE"| CODEMIND proprietary software license
+"THIRD-PARTY-NOTICES.md"| Third-party component license notices
+"README.md"| Project documentation
 
-File structure note: This is the structure documented for the project. Confirm that every listed file exists in the actual project folder and that its filename and path match the references in the HTML files before treating the structure as verified.
+---
 
-Data Storage and Limitations
+Installation and Usage
 
-CODEMIND is a client-side learning application. Its current design has the following limitations:
+Requirements
 
-- It does not provide user accounts or authentication.
-- It does not use a cloud database for learner progress.
-- Progress is stored in the current browser and does not automatically sync between devices.
-- Clearing browser storage may erase saved progress.
-- Quiz questions are multiple-choice questions.
-- The application does not execute submitted code in an isolated programming sandbox.
-- The question bank contains 63 questions, so questions may repeat in later rounds.
-- Certificate IDs do not have an online verification system.
-- Bootstrap and Bootstrap Icons are loaded from a CDN, so an internet connection may be needed to load those external assets.
+- A modern web browser.
+- JavaScript enabled.
+- An internet connection to load the external Bootstrap and Bootstrap Icons dependencies from their CDNs.
 
-These limitations describe the current documented design and should not be interpreted as features that have already been implemented.
+No package installation or build process is included in the supplied project.
 
-Credits
+Running the Application
 
-Project Name: CODEMIND — Developer Thinking Lab
+1. Download the CODEMIND ZIP archive.
+2. Extract the archive.
+3. Open the "codemind" folder.
+4. Open "index.html" in a modern browser.
+5. Review the dashboard.
+6. Navigate to the Tracks page.
+7. Select a programming track or systems challenge.
+8. Answer the questions and review the feedback.
+9. Visit the Badges page to check recorded achievements.
+10. Visit the Certificate page to review completion progress.
 
-Tagline: Train Your Mind. Think Like a Developer.
+Recommended Browsers
 
-Developer / System Owner: Roniel Nyke Gonzales
+Use a current version of one of the following browsers:
 
-Role: System Owner / Web Development
+- Google Chrome
+- Microsoft Edge
+- Mozilla Firefox
+- Apple Safari
 
-Sponsor: Iloilo Tech Company — Iloilo City
+If a browser restricts certain features when pages are opened directly from the filesystem, serve the project folder through a simple local static HTTP server.
 
-License
+The supplied project does not require a backend application to run its included client-side features.
 
-This project is licensed under the MIT License.
+---
 
-Copyright (c) 2026 Roniel Nyke Gonzales
+Progress Storage and Privacy
 
-The MIT License permits use, copying, modification, distribution, sublicensing, and sale of copies of the software, provided that the copyright notice and permission notice are included in substantial portions of the software.
+CODEMIND uses browser LocalStorage for learner progress.
 
-The software is provided without warranty, as described in the full MIT License.
+The current source references the following storage keys:
 
-See the "LICENSE" file for the complete license text.
+Key| Purpose
+"codemind_v2"| Learner progress and application state
+"codemind_theme"| Theme preference
+"cm_intro_seen"| Introductory sequence state
 
-Current Rules (latest update)
+Important Storage Information
 
-- A run contains up to 50 problems (or all problems in the track if fewer). All answers must be correct.
-- A wrong answer is not recorded: it shows a clue only (never the answer) and is replaced by a different problem, so progress is never lost; a correct answer shows why it is right and how it works.
-- 9 tracks + 4 systems (Login, REST API + Database, Scalable Backend, Debug Lab) = 13. All 13 must be completed to unlock the certificate.
-- Debug Lab shows complete system code with one hidden bug; the learner types the corrected line.
-- Licensed under the MIT License (see LICENSE).
+- Progress is associated with the browser profile and website origin.
+- Progress does not automatically synchronize between devices.
+- Different deployment URLs may have separate LocalStorage data.
+- Clearing browser site data may erase saved progress.
+- Private browsing sessions may not retain progress after the session ends.
+- The supplied project does not include cloud backups or remote progress synchronization.
+
+Learners should avoid entering sensitive personal information into the application.
+
+The learner name is used for the on-screen profile and certificate rendering.
+
+---
+
+Known Limitations
+
+The following limitations apply to the supplied project:
+
+1. Frontend Only: The ZIP does not include a backend server or remote database.
+2. No Remote Authentication: A server-backed login and account-management system is not included.
+3. Local Progress: Learning records are stored in the browser rather than synchronized through a cloud service.
+4. No Cross-Device Synchronization: Progress does not automatically transfer between browsers or devices.
+5. External Dependencies: Bootstrap and Bootstrap Icons may require an internet connection.
+6. Client-Side Results: Scores and progress are stored in browser-controlled storage and are not tamper-proof.
+7. Certificate Verification: Certificates are generated locally and are not independently verified through a server.
+8. Browser Compatibility: Some behavior may differ depending on browser settings and supported features.
+9. Audio Restrictions: Browser autoplay policies may require user interaction before audio can play.
+10. License Consistency: Some existing page text and JavaScript comments contain older MIT License references, while the included "LICENSE" file states proprietary terms.
+
+These limitations describe the supplied project and do not imply that additional features cannot be implemented in a future version.
+
+---
+
+Third-Party Components and Credits
+
+The project references external components for interface styling and icons.
+
+Bootstrap 5.3.3
+
+Bootstrap is used for responsive layout and interface components.
+
+License: MIT License.
+
+Official license information: https://getbootstrap.com/docs/5.3/about/license/
+
+Bootstrap Icons 1.11.3
+
+Bootstrap Icons is used for interface icons.
+
+License: MIT License.
+
+Official repository: https://github.com/twbs/icons
+
+Refer to "THIRD-PARTY-NOTICES.md" for the third-party notices included with the project.
+
+Third-party libraries and materials remain subject to their respective licenses. Retain applicable copyright notices and license texts when required.
+
+Project Credits
+
+The application currently displays the following project credits:
+
+- Developer / System Owner: Roniel Nyke Gonzales
+- Role: System Owner / Web Development
+- Sponsor Listed in the Application: Iloilo Tech Company — Iloilo City
+
+These details reflect the information present in the project files. This documentation does not independently verify sponsorship agreements or other external affiliations.
+
+---
+
+License and Permissions
+
+The supplied "LICENSE" file is titled CODEMIND — PROPRIETARY SOFTWARE LICENSE.
+
+The license states that rights to original CODEMIND materials authored by the copyright holder are reserved. Permissions are governed by the terms in that file.
+
+Do not assume that the project can be freely redistributed, sublicensed, sold, modified for commercial distribution, or incorporated into another product without reviewing the applicable license terms and obtaining permission when required.
+
+Important License Clarification
+
+The proprietary CODEMIND license and the MIT licenses of third-party components apply to different materials.
+
+- Original CODEMIND materials are governed by the applicable rights and terms stated in "LICENSE".
+- Bootstrap is distributed under its own MIT License.
+- Bootstrap Icons is distributed under its own MIT License.
+- Other third-party materials remain subject to their respective license terms.
+
+The presence of an MIT-licensed dependency does not make the entire CODEMIND project MIT-licensed.
+
+Before publishing or distributing the project, ensure that all license references in the README, HTML pages, JavaScript comments, and other documentation are consistent with the actual permissions granted.
+
+For uses beyond the permissions stated in "LICENSE", obtain written permission from the relevant rights holder.
+
+---
+
+End of README.md
