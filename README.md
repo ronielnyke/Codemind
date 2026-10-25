@@ -7,7 +7,7 @@ Developer / System Owner: Roniel Nyke Gonzales
 Sponsor Listed in the Application: Iloilo Tech Company — Iloilo City
 Copyright Notice: © 2026 Roniel Nyke Gonzales, for original CODEMIND materials authored by the copyright holder.
 
-«License Notice: This project includes a "LICENSE" file titled CODEMIND — PROPRIETARY SOFTWARE LICENSE. The project is not released under the MIT License by that file. Third-party components retain their respective licenses. See "THIRD-PARTY-NOTICES.md" for additional information. Some existing source-code comments and page text contain older MIT License references that should be corrected to avoid confusion.»
+«License Notice: This project includes a "LICENSE" file titled CODEMIND — PROPRIETARY SOFTWARE LICENSE. The project is not released under the MIT License by that file. Third-party components retain their respective licenses. See "LICENSE" for additional information. Some existing source-code comments and page text contain older MIT License references that should be corrected to avoid confusion.»
 
 ---
 
